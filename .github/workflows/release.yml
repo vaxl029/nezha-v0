@@ -27,7 +27,7 @@ jobs:
     outputs:
       tag_name: ${{ steps.extract_branch.outputs.tag }}
     steps:
-      - run: git config --global --add safe.directory /__w/MegaSuite/nezha-v0
+      - run: git config --global --add safe.directory "$GITHUB_WORKSPACE"
       - uses: actions/checkout@v4
 
       - name: Fetch IPInfo GeoIP Database
